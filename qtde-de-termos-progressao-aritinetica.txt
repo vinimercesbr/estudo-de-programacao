@@ -1,0 +1,18 @@
+Para determinar a quantidade de termos em uma progressão aritmética, usamos a seguinte fórmula:
+
+n = (an - a1) / r + 1
+
+Onde:
+- n é o número total de termos da progressão,
+- a1 é o primeiro termo,
+- an é o último termo,
+- r é a razão da progressão.
+
+Exemplo:
+Se temos uma progressão aritmética com primeiro termo a₁ = 2, último termo aₙ = 20 e razão r = 3, então:
+
+n = (20 - 2) / 3 + 1
+n = 6 + 1
+n = 7
+
+Portanto, essa progressão tem 7 termos.
