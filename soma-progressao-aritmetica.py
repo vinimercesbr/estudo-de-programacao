@@ -2,7 +2,7 @@
 
 #A soma dos números de 2 até 14 pode ser calculada usando a fórmula da soma de uma progressão aritmética:
 
-#n = (n / 2) * (a1 + an)
+#Sn = (n / 2) * (a1 + an)
 
 #Onde:
 #- a1 = 2 (primeiro termo)
