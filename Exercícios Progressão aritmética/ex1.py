@@ -30,7 +30,6 @@ for i in range(laco_repetidor):
     
 print(lista_b)
 
-for i in lista_b:
-  soma_lista=soma_lista+i
+soma_lista=sum(lista_b)
   
 print(soma_lista)
