@@ -32,4 +32,4 @@ print(f'Sequência: {lista_b}')
 
 soma_lista=sum(lista_b)
   
-print(f'Resultado da soma da sequência: {soma_lista)')
+print(f'Resultado da soma da sequência: {soma_lista}')
