@@ -28,8 +28,7 @@ for i in range(laco_repetidor):
     lista_b.append(primeiro_termo)
     primeiro_termo=primeiro_termo+razao
     
-print(f'Sequência: {lista_b}')
 
 soma_lista=sum(lista_b)
   
-print(f'Resultado da soma da sequência: {soma_lista}')
+print(f'Sequência: {lista_b} \nResultado da soma da sequência: {soma_lista}') 
