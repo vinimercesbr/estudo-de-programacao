@@ -14,7 +14,7 @@ print("------")
 
 primeiro_termo=int(input("Digite o 1º termo: "))
 razao=int(input("Digite a razão da progressão: "))
-numero_total_termks=int(input("digite o número total de termos da progressão: "))
+numero_total_termos=int(input("Digite o número total de termos da progressão: "))
 
 ultimo_termo=primeiro_termo+(razao*(numero_total_termos-1))
 
