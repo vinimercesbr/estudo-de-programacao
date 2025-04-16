@@ -6,7 +6,7 @@
   
 #Sabemos que:
 #   O primeiro valor lido para B foi 3 e o quinto número foi 11, seguindo a sequência: 
-#   3, 5,7, 9, 11...
+#   3, 5, 7, 9, 11...
 
 #Essa é uma PA de razão 2.
 
@@ -20,16 +20,16 @@
 
 razao=2
 laco_repetidor=5
-valor_primeiro_termo=3
+primeiro_termo=3
 lista_b = []
 soma_lista=0
 
 for i in range(laco_repetidor):
-    lista_b.append(valor_primeiro_termo)
-    valor_primeiro_termo=valor_primeiro_termo+razao
+    lista_b.append(primeiro_termo)
+    primeiro_termo=primeiro_termo+razao
     
-print(lista_b)
+print(f'Sequência: {lista_b}')
 
 soma_lista=sum(lista_b)
   
-print(soma_lista)
+print(f'Resultado da soma da sequência: {soma_lista)')
