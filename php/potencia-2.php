@@ -11,13 +11,20 @@ n = 1  ==> [1, 2]     # [2^0, 2^1]
 n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
 */
 //Declarações das varíaveis
-$numero_inteiro=2;
-$potencias=[];
+$base=2;
+$lista_expoentes=[];
 $contador=0;
+$lista_potencias=[];
 //Processamento;
-while ($contador <= $numero_inteiro):
-    $potencias[$contador]=$contador;
+while ($contador <= $base):
+    $lista_expoentes[$contador]=$contador;
     $contador=$contador+1;
 endwhile;
-print_r($potencias);
+//print_r($lista_expoentes);
+$contador=0;
+foreach ($lista_expoentes as $expoente) {
+	$contador=$contador+1;
+	$lista_potencias[$contador]=$base**$expoente;
+};
+print_r($lista_potencias);
 ?>
