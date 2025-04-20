@@ -12,11 +12,12 @@ n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
 */
 //Declarações das varíaveis
 $base=2;
+$numero_expoente=2;
 $lista_expoentes=[];
 $contador=0;
 $lista_potencias=[];
 //Processamento;
-while ($contador <= $base):
+while ($contador <= $numero_expoente):
     $lista_expoentes[$contador]=$contador;
     $contador=$contador+1;
 endwhile;
