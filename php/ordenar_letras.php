@@ -9,8 +9,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 use Faker\Factory;
 
 $faker = Factory::create();
-echo $faker->lexify();
-/*echo "Digite as letras\n";
-$letras = fgets(STDIN);
-*/
+
+$letras=($faker->text(8));
+$lista_letras=str_split($letras);
+
+print_r($lista_letras);
 ?>
