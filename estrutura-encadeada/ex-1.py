@@ -5,14 +5,14 @@ Início
  B ← 4 * 2
  N ← (A * 2 + B) / 2
  Se (N < 10) Então
- R ← N * 2
- Escreva("Dobro de N é ", R)
+    R ← N * 2
+    Escreva("Dobro de N é ", R)
  SenãoSe (N >= 10 E N <= 20) Então
- R ← N + 5
- Escreva("N somado com 5 é ", R)
+    R ← N + 5
+    Escreva("N somado com 5 é ", R)
  Senão
- R ← N - 3
- Escreva("N subtraído por 3 é ", R)
+    R ← N - 3
+    Escreva("N subtraído por 3 é ", R)
  FimSe
 Fim
 """
