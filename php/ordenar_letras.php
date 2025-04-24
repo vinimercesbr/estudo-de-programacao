@@ -6,14 +6,22 @@ Você não deve remover ou adicionar elementos de/para a matriz.
 Sáida:[A***p***p***l***e]*/
 ?>
 <?php
-require_once __DIR__ . '/vendor/autoload.php';
+/*require_once __DIR__ . '/vendor/autoload.php';
 
 use Faker\Factory;
 
 $faker = Factory::create();
 
-echo $letras=($faker->name());
-$lista_letras=str_split(strtoupper($letras));
-
+echo $letras=($faker->name()); */
+//Entradas de Dados
+echo "Digite uma palavra: ";
+$letras=trim(fgets(STDIN));
+//Processamento
+$lista_letras=str_split($letras);
+$primeira_letra= $lista_letras[0];
+/*if (ord($str) == 10) {
+    echo "O primeiro caractere de \$str é uma nova linha.\n";
+}*/
 print_r($lista_letras);
+echo (ord($primeira_letra));
 ?>
