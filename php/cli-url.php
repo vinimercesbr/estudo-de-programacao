@@ -8,12 +8,14 @@
     use DiDom\Document;
 
     $document = new Document('https://roadmap.sh/full-stack', true);
-    /*
-    $posts = $document->find('img[src$=png]');
-
-    print_r($posts);*/
-    // prints the number of links in the document
-    echo $document->count('a');
-    // prints the number of items in the list
-    echo $document->first('ul')->count('li');
+    
+    function verificacao($document){
+        if ($document->has('tr')) {
+            $posts = $document->find('tr');
+            print_r($posts);
+        }else{
+            echo("Não tem");
+        }       
+    };
+   verificacao($document);
 ?>
