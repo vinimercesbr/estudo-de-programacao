@@ -24,5 +24,11 @@ while($contador<128){
   $lista_names[$contador]=$faker->name();
   $contador=$contador+1; 
 };
-print_r($lista_names);
+
+foreach($lista_names as $nome){
+  echo $nome;
+  echo "\n";
+  echo $nome[0];
+  echo "\n";
+}
 ?>
