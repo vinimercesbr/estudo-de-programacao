@@ -4,7 +4,7 @@
 ?>
 <?php
     // Assuming you installed from Composer:
-    require_once __DIR__ . '/vendor/autoload.php';
+     require_once __DIR__ . '/vendor/autoload.php';
     use DiDom\Document;
     $document = new Document('https://roadmap.sh/full-stack', true);   
     function verificacao($document){
