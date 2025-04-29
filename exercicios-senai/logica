@@ -1,0 +1,18 @@
+Exercício 1 - Aprovação com Média e Presença 
+Para ser aprovado, o aluno precisa: 
+- Ter média das notas >= 7.0 
+- E presença >= 75% 
+Dados: 
+- Nota 1: 6.0, Nota 2: 8.0 
+- Aulas assistidas: 33, Total: 40 
+Pseudocódigo: 
+media = (6.0 + 8.0) / 2 
+presenca = (33 / 40) * 100 
+se (media >= 7 E presenca >= 75) 
+ escreva("Aprovado") 
+senao 
+ escreva("Reprovado") 
+1. Calcule a média. 
+2. Calcule a presença. 
+3. Qual será a mensagem exibida? 
+( ) Aprovado ( ) Reprovado 
