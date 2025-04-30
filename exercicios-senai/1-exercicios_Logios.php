@@ -14,9 +14,9 @@ $operacao_presenca=($aulas_assistidas/$total_aulas)*100;
 function dados_alunos($media,$presenca){
     $media;
     $presenca;
-    echo("Média " . $media);
+    echo("Média: " . $media);
     echo "\n";
-    echo("Presença ". $presenca);
+    echo("Presença ". $presenca."%");
     echo "\n";
 }
 
