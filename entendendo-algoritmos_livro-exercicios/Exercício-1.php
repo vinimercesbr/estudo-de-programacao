@@ -30,12 +30,22 @@ $contador=0;
 $meio=0;
 $inicio=0;
 $fim=127;
-
+$lista_names_grupo=[];
 while($contador<128){
     $lista_names[$contador]=$faker->name();
     $contador=$contador+1; 
 };
 
 sort($lista_names);
-print_r(($lista_names));
+foreach ($lista_names as $name){
+    $partes = explode(' ', $name);
+
+    $primeira_letra=$partes[0][0];
+    if($primeira_letra=="A"){
+        $lista_names_grupo[$name]=$primeira_letra;
+            
+    };    
+    
+}
+print_r(array_keys($lista_names_grupo));
 ?>
