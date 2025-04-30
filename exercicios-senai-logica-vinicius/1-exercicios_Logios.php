@@ -1,14 +1,13 @@
 <?php
 //Declaração das variáveis
 
-$nota_primeira=6;
-$nota_segunda=8;
+$notas=[6,8];
 $aulas_assistidas=33;
 $total_aulas=40;
 
 //Processamento dos Dados
 
-$operacao_media=($nota_primeira+$nota_segunda)/2;
+$operacao_media=($notas[0]+notas[1])/2;
 $operacao_presenca=($aulas_assistidas/$total_aulas)*100;
 
 function dados_alunos($media,$presenca){
@@ -16,7 +15,7 @@ function dados_alunos($media,$presenca){
     $presenca;
     echo("Média: " . $media);
     echo "\n";
-    echo("Presença ". $presenca."%");
+    echo("Presença: ". $presenca."%");
     echo "\n";
 }
 
