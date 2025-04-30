@@ -28,18 +28,14 @@ $faker = Faker\Factory::create();
 $lista_names=[];
 $contador=0;
 $meio=0;
-$inici0=0;
-$fim=0;
+$inicio=0;
+$fim=127;
+
 while($contador<128){
     $lista_names[$contador]=$faker->name();
     $contador=$contador+1; 
 };
 
-/*foreach($lista_names as $nome){
-    echo $nome;
-    echo "\n";
-    echo $nome[0];
-    echo "\n";
-}*/
-print_r($lista_names);
+sort($lista_names);
+print_r(($lista_names));
 ?>
