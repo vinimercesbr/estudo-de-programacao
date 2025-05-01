@@ -25,27 +25,32 @@ require_once 'vendor/autoload.php';
 
 $faker = Faker\Factory::create();
 
-$lista_names=[];
-$contador=0;
-$meio=0;
-$inicio=0;
-$fim=127;
-$lista_names_grupo=[];
-while($contador<128){
-    $lista_names[$contador]=$faker->name();
-    $contador=$contador+1; 
-};
+// Initialize the name list
+$nameList = [];
+$index = 0;
+$start = 0;
+$end = 127;
+$namesStartingWithA = [];
 
-sort($lista_names);
-foreach ($lista_names as $name){
-    $partes = explode(' ', $name);
-
-    $primeira_letra=$partes[0][0];
-    if($primeira_letra=="A"){
-        $lista_names_grupo[$name]=$primeira_letra;
-            
-    };    
-    
+// Generate 128 random names
+while ($index <= $end) {
+    $nameList[$index] = $faker->name();
+    $index++;
 }
-print_r(array_keys($lista_names_grupo));
+
+// Sort names in alphabetical order
+sort($nameList);
+
+// Filter names that start with the letter "A"
+foreach ($nameList as $fullName) {
+    $nameParts = explode(' ', $fullName);
+    $firstLetterOfFirstName = $nameParts[0][0];
+
+    if ($firstLetterOfFirstName === "M") {
+        $namesStartingWithA[$fullName] = $firstLetterOfFirstName;
+    }
+}
+
+// Display names starting with "A"
+print_r(array_keys($namesStartingWithA));
 ?>
