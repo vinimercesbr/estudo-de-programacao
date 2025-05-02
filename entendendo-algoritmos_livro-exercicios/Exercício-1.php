@@ -35,13 +35,14 @@ $namesStartingWithA = [];
 // Generate 128 random names
 while ($index <= $end) {
     $nameList[$index] = $faker->name();
-    $index++;
+    $index=$index+1;
 }
 
 // Sort names in alphabetical order
 sort($nameList);
+//$letra_nome=trim(fgets(STDIN))
 
-// Filter names that start with the letter "A"
+// Filter names that start with the specific letter 
 foreach ($nameList as $fullName) {
     $nameParts = explode(' ', $fullName);
     $firstLetterOfFirstName = $nameParts[0][0];
@@ -49,8 +50,10 @@ foreach ($nameList as $fullName) {
     if ($firstLetterOfFirstName === "M") {
         $namesStartingWithA[$fullName] = $firstLetterOfFirstName;
     }
-}
+};
 
-// Display names starting with "A"
+//Shows the list containing the first letter of the name the user wants to find.
 print_r(array_keys($namesStartingWithA));
+//Shows how many items in this array
+echo(count($namesStartingWithA));
 ?>
