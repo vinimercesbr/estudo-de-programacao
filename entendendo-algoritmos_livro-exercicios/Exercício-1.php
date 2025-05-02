@@ -39,15 +39,16 @@ while ($index <= $end) {
 }
 
 // Sort names in alphabetical order
-sort($nameList);
-//$letra_nome=trim(fgets(STDIN))
+sort($nameList); 
+echo("Nome: ");
+$letra_nome=trim(fgets(STDIN));
 
 // Filter names that start with the specific letter 
 foreach ($nameList as $fullName) {
     $nameParts = explode(' ', $fullName);
     $firstLetterOfFirstName = $nameParts[0][0];
 
-    if ($firstLetterOfFirstName === "M") {
+    if ($firstLetterOfFirstName === $letra_nome) {
         $namesStartingWithA[$fullName] = $firstLetterOfFirstName;
     }
 };
