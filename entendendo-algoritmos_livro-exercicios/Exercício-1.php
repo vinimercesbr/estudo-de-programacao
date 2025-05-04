@@ -37,24 +37,33 @@ while ($index <= $end) {
     $nameList[$index] = $faker->name();
     $index=$index+1;
 }
+function letra_selec($firstLetterOfFirstName,$letra_nome,$namesStartingWithA,$fullName){
+    $firstLetterOfFirstName;
+    $letra_nome;
+    $namesStartingWithA;
+    $fullName;
+    if ($firstLetterOfFirstName === $letra_nome) {
+        $namesStartingWithA[$fullName] = $fullName;
+    };
+    return $namesStartingWithA;
+};
 
 // Sort names in alphabetical order
 sort($nameList); 
 echo("Nome: ");
 $letra_nome=trim(fgets(STDIN));
+$letra_nome= strtoupper($letra_nome);
 
 // Filter names that start with the specific letter 
 foreach ($nameList as $fullName) {
     $nameParts = explode(' ', $fullName);
     $firstLetterOfFirstName = $nameParts[0][0];
+    $namesStartingWithA=letra_selec($firstLetterOfFirstName,$letra_nome,$namesStartingWithA,$fullName);
 
-    if ($firstLetterOfFirstName === $letra_nome) {
-        $namesStartingWithA[$fullName] = $firstLetterOfFirstName;
-    }
 };
 
 //Shows the list containing the first letter of the name the user wants to find.
-print_r(array_keys($namesStartingWithA));
+print_r($namesStartingWithA);
 //Shows how many items in this array
 echo(count($namesStartingWithA));
 ?>
