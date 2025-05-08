@@ -6,14 +6,20 @@
     // Assuming you installed from Composer:
      require_once __DIR__ . '/vendor/autoload.php';
     use DiDom\Document;
-    $document = new Document('https://roadmap.sh/full-stack', true);   
-    function verificacao($document){
-        if ($document->has('tr')) {
-            $posts = $document->find('tr');
-            print_r($posts);
+    echo("Site: ");
+    $site=trim(fgets(STDIN));
+    echo("Tag: ");
+    $tag=trim(fgets(STDIN));
+    $document = new Document($site, true);   
+    function verificacao($document,$tag){
+        if ($document->has($tag)) {
+            $posts = $document->find($tag);
+            echo($posts);
+            echo("\n");
+            echo(count($posts));
         }else{
             echo("Não tem");
         }       
     };
-   verificacao($document);
+   verificacao($document,$tag);
 ?>
