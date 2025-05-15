@@ -1,7 +1,10 @@
 #Escreva a matriz  acima com índices ao lado de cada número?// a[0][0]=2
 
-linhas = [[2, 3, 9, 18], [4, 8, 12, 15], [6, 7, 11, 13]]
-
+linhas = {
+    "primeira": [2, 3, 9, 18],
+    "segunda": [4, 8, 12, 15],
+    "terceira": [6, 7, 11, 13]
+}
 
 def listas(lista, indice):
   contador = 0
@@ -11,6 +14,6 @@ def listas(lista, indice):
 
 
 indice = [0, 1, 2]
-listas(linhas[0], indice[0])
-listas(linhas[1], indice[1])
-listas(linhas[2], indice[2])
+listas(linhas["primeira"], indice[0])
+listas(linhas["segunda"], indice[1])
+listas(linhas["terceira"], indice[2])
