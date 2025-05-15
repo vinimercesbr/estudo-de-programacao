@@ -2,7 +2,7 @@ modules = ["php-8.1", "php-8.2", "python-3.11"]
 
 [nix]
 channel = "stable-24_05"
-packages = ["gh"]
+packages = ["gh", "nano"]
 
 [[ports]]
 localPort = 8080

@@ -7,4 +7,5 @@
 -H "X-GitHub-Api-Version: 2022-11-28" \
 "https://api.github.com/search/repositories?q=!NOME DO REPOSITORIO&sort=stars&order=desc&per_page=5"
 */
+https://github.com/trending
 ?>
