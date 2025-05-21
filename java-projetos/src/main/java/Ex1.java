@@ -21,9 +21,9 @@ public class Ex1 {
         System.out.print("Digite seu nome: ");
         String nome = entrada.nextLine();
         System.out.print("Digite sua idade: ");
-        Number idade = entrada.nextInt();
+        int idade = entrada.nextInt();
         System.out.print("Digite o valor da sua dívida: ");
-        Number valor = entrada.nextDouble();
+        double valor = entrada.nextDouble();
         System.out.println(nome+ " com idade de "+idade+" anos , gastou no supermercado: " +valor+ " reais");
         entrada.close(); // Boa prática
     }
