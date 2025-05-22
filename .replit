@@ -1,4 +1,4 @@
-modules = ["php-8.1", "php-8.2", "python-3.11"]
+modules = ["php-8.1", "php-8.2", "python-3.11", "java-graalvm22.3"]
 
 [nix]
 channel = "stable-24_05"
