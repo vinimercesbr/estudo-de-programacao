@@ -7,4 +7,7 @@ $lista_tarefas = [
 
 $json_lista_tarefas = json_encode($lista_tarefas, JSON_PRETTY_PRINT);
 echo $json_lista_tarefas;
+$create_id=random_bytes(8);
+$create_id=bin2hex($create_id);
+echo $create_id
 ?>
