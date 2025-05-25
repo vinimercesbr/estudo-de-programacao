@@ -1,24 +1,22 @@
 <?php
-function criar_json($lista_tarefas){
-  $file = 'lista_tarefas.json';
+function create_json($list_task){
+  $file = 'list_task.json';
   $current = file_get_contents($file);
-  $current .= $lista_tarefas;
+  $current .= $list_task;
   file_put_contents($file, $current);
 };
 
-function processamento_tarefas($tarefa,){
-  $lista_tarefas=array("tarefa"=>$tarefa);
-  $lista_tarefas=json_encode($lista_tarefas, JSON_PRETTY_PRINT);
-  criar_json($lista_tarefas);
+function processing_task($task){
+  $list_task= array("task"=>$task);
+  $list_task=json_encode($list_task, JSON_PRETTY_PRINT);
+  create_json($list_task);
 };
 
-function criar_tarefa(){
-  echo "Digite sua tarefa: \n";
-  $tarefa=trim(fgets(STDIN));
-  processamento_tarefas($tarefa);
+function create_task(){
+  echo " Enter your task: \n";
+  $task=trim(fgets(STDIN));
+  processing_task($task);
 };
-/*function criar_id(){
-  $id=bin2hex(random_bytes(8));
-};*/
-criar_tarefa();
+
+create_task();
 ?>
