@@ -1,7 +1,16 @@
 <?php
+function check_file($file){
+  $check=file_exists($file);
+  if($check==false){
+    echo "json não existe";
+  }else{
+    echo "json existe";
+  };
+};
 function create_json($list_task){
   $list_task=json_encode($list_task, JSON_PRETTY_PRINT);
   $file = 'list_task.json';
+  check_file($file);
   $current = file_get_contents($file);
   $current .= $list_task;
   file_put_contents($file, $current);
