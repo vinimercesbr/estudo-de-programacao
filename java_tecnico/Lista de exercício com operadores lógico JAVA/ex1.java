@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class ex1 {
  public static void main(String[] args) {
    Scanner scanner = new Scanner(System.in);
-   System.out.println("Me fale sua idade");
+   System.out.println("Me fãle sua idade");
    int idade = scanner.nextInt();
+   scanner.close();
    if(idade>=18){
      if(idade<=59){
        System.out.println("Você é adulto");

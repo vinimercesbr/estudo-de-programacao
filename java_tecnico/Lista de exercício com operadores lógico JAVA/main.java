@@ -5,9 +5,12 @@ import java.util.Scanner;
 public class Main {
     public static boolean verificar(boolean ingresso, boolean vip){
         if((vip==true)&&(ingresso==true)){
-                System.out.println("Você pode entrar na área vip");
+            System.out.println("Você pode entrar na área vip");
+            return true;
             }else{
                 System.out.println("Você está proibido de entrar na área vip");
+            return false;
+
             }
     }
     public static void main(String[] args) {
@@ -16,6 +19,7 @@ public class Main {
         boolean ingresso = scanner.nextBoolean();
         System.out.println("Você está com  pulseira vip?(true,false)");
         boolean vip = scanner.nextBoolean();
+        scanner.close();
         verificar(ingresso,vip);
     }
 }
