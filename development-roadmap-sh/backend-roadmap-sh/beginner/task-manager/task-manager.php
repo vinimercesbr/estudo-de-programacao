@@ -1,19 +1,18 @@
 <?php
-function check_file($file){
+function check_file($file,$list_task){
   $check=file_exists($file);
   if($check==false){
-    echo "json não existe";
+    file_put_contents($file,$list_task);
   }else{
-    echo "json existe";
+    $current = file_get_contents($file);
+    $current .= $list_task;
+    file_put_contents($file, $current);
   };
 };
 function create_json($list_task){
   $list_task=json_encode($list_task, JSON_PRETTY_PRINT);
   $file = 'list_task.json';
-  check_file($file);
-  $current = file_get_contents($file);
-  $current .= $list_task;
-  file_put_contents($file, $current);
+  check_file($file,$list_task);
 };
 
 function processing_task($task){
