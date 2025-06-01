@@ -1,19 +1,17 @@
 <?php
 function check_file($file,$list_task){
   $check=file_exists($file);
-  foreach ($list_task as $index_list_task){
     if($check==false){
-      file_put_contents($file,$index_list_task);
-      $list_task_json=json_encode($index_list_task, JSON_PRETTY_PRINT);
+      $list_task_json=json_encode($list_task, JSON_PRETTY_PRINT);
+      file_put_contents($file,$list_task_json);
+    return true;
     }else{
-      $list_task_json=json_decode($index_list_task, JSON_PRETTY_PRINT);
-      $current = file_get_contents($file);
-      $current .=$index_list_task;
-      file_put_contents($file, $current);
-      $list_task_json=json_encode($list_task_json, JSON_PRETTY_PRINT);
-    };
-  };
-};
+      foreach ($list_task as $index){
+        print_r($index);
+      }
+    }
+}
+
 function write_tasks_to_json_file($tasks){
   $file = 'list_task.json';
   check_file($file, $tasks);
