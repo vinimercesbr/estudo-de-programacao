@@ -14,22 +14,21 @@ function check_file($file,$list_task){
     };
   };
 };
-
-function create_json($list_task){
+function write_tasks_to_json_file($tasks){
   $file = 'list_task.json';
-  check_file($file,$list_task);
-};
+  check_file($file, $tasks);
+}
 
-function processing_task($task){
-  $list_task= array($task);
-  create_json($list_task);
-};
+function save_task_to_json($task){
+  $tasks = array($task);
+  write_tasks_to_json_file($tasks);
+}
 
-function create_task(){
+function prompt_user_for_task(){
   echo "Enter your task: \n";
-  $task=trim(fgets(STDIN));
-  processing_task($task);
-};
+  $task = trim(fgets(STDIN));
+  save_task_to_json($task);
+}
 
-create_task();
+prompt_user_for_task();
 ?>
