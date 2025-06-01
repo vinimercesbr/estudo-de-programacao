@@ -10,7 +10,7 @@ function check_file($file,$list_task){
       $current = file_get_contents($file);
       $current .=$index_list_task;
       file_put_contents($file, $current);
-      $list_task_json=json_encode($index_list_task, JSON_PRETTY_PRINT);
+      $list_task_json=json_encode($list_task_json, JSON_PRETTY_PRINT);
     };
   };
 };
